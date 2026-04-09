@@ -1,13 +1,16 @@
+// Как только скрипт начал работу — блокируем скролл
+document.body.classList.add('no-scroll');
+
 window.addEventListener('load', () => {
     const preloader = document.getElementById('preloader');
     
-    // Добавляем задержку в 500мс, чтобы пользователь успел увидеть прелоадер (опционально)
     setTimeout(() => {
         preloader.classList.add('preloader-hidden');
         
-        // Полностью удаляем из DOM через полсекунды, чтобы не мешал кликам
+        // Когда прелоадер скрылся, возвращаем скролл
         setTimeout(() => {
             preloader.style.display = 'none';
+            document.body.classList.remove('no-scroll'); // Разблокируем
         }, 500);
     }, 500);
 });
