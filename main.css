@@ -1,0 +1,353 @@
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff; /* Цвет фона под картинкой */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 9999; /* Самый высокий индекс */
+}
+.preloader-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Класс для скрытия */
+.preloader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+body {
+  background-color: #fff;
+  font-family: 'Inter', Roboto, sans-serif;
+  margin: 0;
+  color: #000;
+}
+:root {
+  --txt-secondary: #6E6E6E;
+  --contrast: #ED0000; 
+}
+
+
+h1 {
+  font-size: 48px;
+  font-weight: 500;
+  margin: 0;
+}
+h2 {
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+}
+h3.regular {
+  font-weight: 400;
+}
+p {
+  margin: 0;
+
+}
+.link {
+  font-size: 20px;
+  text-decoration: none;
+  color: #000;
+}
+.link:hover {
+  color: var(--contrast);
+}
+.link:active {
+  color: var(--contrast);
+}
+
+/* --- Шапка --- */
+header{
+max-width: 1260px;
+margin: 0 auto;
+padding: 0 16px;
+}
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+.logo {
+  text-decoration: none;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #000;
+}
+.logo-part {
+  color: var(--contrast);
+}
+nav {
+  display: flex;
+  gap: 40px;
+}
+.burger-btn {
+    display: none; /* СКРЫВАЕМ кнопку на компьютере */
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    padding: 0;
+    z-index: 1000;
+}
+.burger-btn span {
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+/* --- Хиро блок --- */
+main {
+  max-width: 100%;
+  padding: 0 16px;
+}
+section.hero {
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+img {
+  border-radius: 20px;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+}
+.hero-txt-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  max-width: 812px;
+  text-align: center;
+}
+.hero-txt-wrapper > h3 {
+  color: var(--txt-secondary);
+}
+.hero-txt-wrapper > a {
+  color: var(--contrast);
+}
+
+/* --- Портфолио --- */
+section.portfolio {
+  background-color: #f5f5f5;
+  width: 100%;
+  padding: 50px 0;
+}
+div.container {
+  max-width: 1260px;
+  margin: 0 auto;
+}
+div.container h2 {
+  margin-bottom: 20px;
+}
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+}
+.card-large {
+  grid-column: span 2;
+}
+.product-card {
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 5px rgba(0,0,0,0.1);
+}
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+  /* Шапка карточки (Текст + Подробнее) */
+.card-header {
+  padding: 16px; /* Внутренние отступы текста */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+.card-header .title {
+  max-width: 70%; /* Ограничиваем ширину текста, чтобы не налезал на "Подробнее" */
+}
+.card-header h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.card-header .txt {
+  font-size: 16px;
+  color: var(--txt-secondary);
+  line-height: 1.4;
+}
+.card-header .more {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap; /* Чтобы не переносилось на новую строку */
+}
+/* Красный цвет для "Подробнее" на hover (как у навигации) */
+.product-card:hover .more {
+  color: var(--contrast);
+}
+/* Изображение внутри карточки */
+.card-image {
+  display: block;
+  padding: 0 16px 16px 16px; /* Отступы для картинки, чтобы она была "внутри" серого фона */
+  margin-top: auto; /* Прижимает картинку к низу карточки */
+  max-height: 600px;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 14px; /* Легкое скругление самой картинки монитора */
+  object-fit:cover;
+  object-position: top;
+}
+
+
+.about {
+    padding: 40px 0;
+    background-color: #fff;
+}
+/* Настройка сетки */
+.about-row {
+    display: grid;
+    /* Левая колонка 1 доля, правая 2.5 доли (примерно 30/70) */
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;
+    padding: 20px 0;
+    border-top: 1px solid #EAEAEA; /* Линии между секциями */
+}
+/* Убираем верхнюю линию у самого первого блока, чтобы не дублировать заголовок */
+.about-row:first-of-type {
+    border-top: 1px solid #EAEAEA; 
+}
+/* Стили заголовков внутри строк */
+.about-row h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+}
+/* Стили текста справа */
+.about-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--txt-secondary);
+    margin-bottom: 12px;
+}
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+/* Стили ссылок в контактах */
+.contacts-list a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.contacts-list a:hover {
+    color: var(--contrast);
+}
+footer {
+    background-color: #f5f5f5;
+    padding: 20px 16px;
+}
+.footer-wrapper {
+  max-width: 1260px;
+  margin: 0 auto;
+}
+.footer-wrapper p {
+  color: var(--txt-secondary);
+  font-size: 14px;
+}
+
+
+/* Адаптив для мобилок: превращаем в одну колонку */
+@media (max-width: 768px) {
+    .about-row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 24px 0;
+    }
+
+
+    /* 1. Перестраиваем сетку в одну колонку */
+  .portfolio-grid {
+    grid-template-columns: 1fr; /* Теперь только одна колонка */
+    gap: 16px; /* Можно немного уменьшить отступы для мобилок */
+  }
+  /* 2. Отменяем растяжение большой карточки */
+  .card-large {
+    grid-column: span 1; /* Теперь она занимает только одну колонку, как и все */
+  }
+  /* 3. Корректируем высоту контейнера картинки (опционально) */
+  .card-image {
+    height: 300px; /* На мобилках 500px может быть слишком много, лучше уменьшить */
+  }
+  /* 4. Уменьшаем шрифты для заголовков (опционально, для лучшего UX) */
+  h1 { font-size: 32px; }
+  h2 { font-size: 24px; }
+  .card-header {
+    flex-direction: column; /* Текст и "Подробнее" встанут друг под другом */
+    align-items: flex-start;
+  }
+
+
+  .burger-btn {
+        display: flex; /* ПОКАЗЫВАЕМ кнопку только на мобилках */
+    }
+
+  nav {
+        /* Превращаем навигацию в скрытую панель */
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: -100%; /* Спрятано */
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        transition: 0.4s ease-in-out;
+        z-index: 999;
+    }
+
+    /* Когда добавляем класс .open через JS */
+  nav.open {
+        right: 0;
+    }
+
+    /* Анимация иконки в крестик */
+    .burger-btn.active span:nth-child(1) { transform: translateY(8.5px) rotate(45deg); }
+    .burger-btn.active span:nth-child(2) { opacity: 0; }
+    .burger-btn.active span:nth-child(3) { transform: translateY(-8.5px) rotate(-45deg); }
+}
