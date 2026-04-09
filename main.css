@@ -10,7 +10,7 @@
     z-index: 9999; /* Самый высокий индекс */
 }
 .preloader-img {
-    max-width: auto;
+    max-width: none;
     height: auto;
     display: block;
 }
