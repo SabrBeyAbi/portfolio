@@ -19,7 +19,11 @@
     opacity: 0;
     visibility: hidden;
 }
-
+.no-scroll {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}   
 
 html {
   scroll-behavior: smooth;
