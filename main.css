@@ -25,9 +25,7 @@
     width: 100%;
 }   
 
-html {
-  scroll-behavior: smooth;
-}
+
 body {
   background-color: #fff;
   font-family: 'Inter', Roboto, sans-serif;
@@ -38,7 +36,6 @@ body {
   --txt-secondary: #6E6E6E;
   --contrast: #ED0000; 
 }
-
 
 h1 {
   font-size: 48px;
@@ -60,7 +57,6 @@ h3.regular {
 }
 p {
   margin: 0;
-
 }
 .link {
   font-size: 20px;
@@ -73,6 +69,7 @@ p {
 .link:active {
   color: var(--contrast);
 }
+
 
 /* --- Шапка --- */
 header{
@@ -118,6 +115,8 @@ nav {
     border-radius: 3px;
     transition: 0.3s;
 }
+
+
 /* --- Хиро блок --- */
 section.hero {
   padding: 50px 16px;
@@ -129,7 +128,7 @@ section.hero {
 }
 .hero > picture > img {
   border-radius: 20px;
-  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
 }
 .hero-txt-wrapper {
   display: flex;
@@ -146,6 +145,7 @@ section.hero {
 .hero-txt-wrapper > a {
   color: var(--contrast);
 }
+
 
 /* --- Портфолио --- */
 section.portfolio {
@@ -177,7 +177,7 @@ div.container h2 {
 }
 .product-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 5px rgba(0,0,0,0.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
 }
 .card-link {
   text-decoration: none;
@@ -226,7 +226,6 @@ div.container h2 {
   margin-top: auto; /* Прижимает картинку к низу карточки */
   max-height: 600px;
 }
-
 .card-image img {
   width: 100%;
   height: 100%;
@@ -237,8 +236,9 @@ div.container h2 {
 }
 
 
+/* Блок Дополнительной информации*/
 .about {
-    padding: 40px 0;
+    padding: 50px 0;
     background-color: #fff;
 }
 /* Настройка сетки */
@@ -293,8 +293,70 @@ footer {
 }
 
 
+/*Заголовок внутренней страницы*/
+.case-hero {
+    padding: 50px 0 0 0;
+    text-align: left; /* В кейсе текст обычно по левому краю, как на макете */
+}
+.case-subtitle {
+    color: var(--txt-secondary);
+    font-size: 16px;
+    margin: 8px 0 20px 0;
+}
+.case-main-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Сетка описания (используем 1 колонку для текста, как в макете) */
+.case-description {
+    padding: 20px 0;
+}
+.case-info-block {
+    margin-bottom: 20px;
+}
+div.case-info-block > h2 {
+  margin-bottom: 8px;
+}
+.txt-list {
+    padding-left: 20px;
+    color: #000;
+    line-height: 1.6;
+    margin: 0 0;
+}
+.txt-list li {
+    margin-bottom: 8px;
+}
+/* Визуальная часть */
+.case-visuals {
+    background-color: #f5f5f5; /* Как в твоем портфолио-гриде */
+    padding: 40px 0;
+}
+div.container > h2.section-label{
+    margin-bottom: 8px;
+}
+.visual-item {
+    margin-top: 20px;
+    text-align: center;
+}
+.full-width-img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    display: block;
+}
+
+
 /* Адаптив для мобилок: превращаем в одну колонку */
 @media (max-width: 768px) {
+    section.portfolio, .about {
+      padding: 30px 0;
+    }
+    section.case-hero {
+      padding: 30px 0 0 0;
+    }
     .about-row {
         grid-template-columns: 1fr;
         gap: 16px;
