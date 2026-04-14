@@ -317,6 +317,9 @@ footer {
 .case-info-block {
     margin-bottom: 20px;
 }
+.case-info-block > p {
+  margin-bottom: 8px;
+}
 div.case-info-block > h2 {
   margin-bottom: 8px;
 }
