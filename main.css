@@ -158,7 +158,12 @@ div.container {
   margin: 0 auto;
   padding: 0 16px;
 }
-div.container h2 {
+div.container_txt {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+div.container, .container_txt h2 {
   margin-bottom: 20px;
 }
 .portfolio-grid {
@@ -337,7 +342,7 @@ div.case-info-block > h2 {
     background-color: #f5f5f5; /* Как в твоем портфолио-гриде */
     padding: 40px 0;
 }
-div.container > h2.section-label{
+div.container, .container_txt > h2.section-label{
     margin-bottom: 8px;
 }
 .visual-item {
