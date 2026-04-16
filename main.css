@@ -163,7 +163,7 @@ div.container_txt {
   margin: 0 auto;
   padding: 0 16px;
 }
-div.container, .container_txt h2 {
+div.container h2 {
   margin-bottom: 20px;
 }
 .portfolio-grid {
