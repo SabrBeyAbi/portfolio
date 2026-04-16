@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galamat-Systems</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <div class="header-wrapper">
+            <a href="index.html" class="logo">Kistauov.<span class="logo-part">Da</span></a>
+            <button class="burger-btn" id="burgerBtn" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="mobileNav">
+                <a href="index.html#main" class="link">Общее</a>
+                <a href="index.html#portfolio" class="link">Портфолио</a>
+                <a href="index.html#contacts" class="link">Контакты</a>
+            </nav>
+        </div>
+    </header>
+    <main class="case-study">
+        <section class="case-hero">
+            <div class="container">
+                <h1 class="case-title">Galamat-Systems</h1>
+                <p class="case-subtitle">Проектирование дизайна нового модуля электронной очереди.</p>
+                <picture class="case-main-image">
+                    <img src="img/galamat.png" alt="BNS Service CRM Dashboard">
+                </picture>
+            </div>
+        </section>
+
+        <section class="case-description">
+            <div class="container">
+                <div class="case-grid">
+                    <div class="case-info-block">
+                        <h2>О продукте</h2>
+                        <p class="txt">BNS Service подразумевался как сайт для сервисного центра, но позже заказчик попросил сделать CRM-систему для сотрудников, чтобы сократить расходы на содержание офиса.</p>
+                    </div>
+                    <div class="case-info-block">
+                        <h2>Контекст</h2>
+                        <p class="txt">Директор сервисного центра, изучая рынок в Москве, обратил внимание на существенное отличие в операционной модели конкурентов. 
+                            Московские сервисные центры активно использовали собственные CRM-системы (аналогичные Битрикс24), которые позволяли минимизировать затраты на содержание 
+                            офиса.
+                        </p>
+                        <p class="txt">
+                            Вся работа выстраивалась внутри системы: администраторы создавали заказы, распределяли их между сотрудниками, а мастера принимали и закрывали задачи 
+                            прямо через CRM. Через ту же систему сотрудники могли заказывать запчасти, отслеживать статус ремонтов и контролировать свою выручку.
+                        </p>
+                        <p class="txt">Ключевое отличие заключалось в том, что сотрудникам больше не требовалось физически присутствовать в офисе — все рабочие процессы были доступны с телефона.</p>
+                    </div>
+                    <div class="case-info-block">
+                        <h2>Проблемы</h2>
+                        <ul class="txt-list">
+                            <li>Лишние операционные затраты</li>
+                            <li>Зависимость от офиса</li>
+                            <li>Снижение прозрачности и управляемости процессов</li>
+                        </ul>
+                    </div>
+                    <div class="case-info-block">
+                        <h2>Что в итоге сделал?</h2>
+                        <p class="txt">CRM задумывалась как десктопная система, но реальное использование сместилось в мобильный сценарий: мастера работают с телефона, а десктоп остался для администраторов и руководства.</p>
+                        <p class="txt">Сфокусировался на ключевых сценариях сотрудников и упростил их до быстрых действий с телефона:</p>
+                        <ul class="txt-list">
+                            <li>Получение и обработка заказов</li>
+                            <li>Мониторинг складских запасов</li>
+                            <li>Заказ запчастей</li>
+                            <li>Разделил логику по ролям (администратор/мастер)</li>
+                        </ul>
+                        <p class="txt">В результате сотрудники могут работать полностью удалённо, а процессы стали прозрачнее и проще в управлении.</p>
+                    </div>
+                    <div class="case-info-block">
+                        <h2 class="section-label">Процесс</h2>
+                        <p class="txt-secondary">Не использовал формальные фреймворки вроде Double Diamond или дизайн-мышления, а сфокусировался на базовом цикле: исследование → анализ → проектирование → тестирование.</p>
+                    </div>
+                    <div class="case-info-block">
+                        <h2 class="section-label">Исследование</h2>
+                        <p class="txt">Интервью со стейкхолдерами позволило быстро собрать разные точки зрения, понять реальные проблемы и не тратить время на лишние гипотезы.</p>
+                        <p class="txt">Во время разговоров сотрудники описывали процессы через детали и частные случаи, поэтому я фокусировался на сути — задавал вопросы, чтобы выделить ключевые сценарии:
+                            как создаются заказы, как они распределяются, где возникают задержки и как ведётся учёт.</p>
+                        <p class="txt">Отдельно собрал взгляд бизнеса — какие задачи система должна решать с точки зрения эффективности и управления.</p>
+                        <p class="txt">В итоге сфокусировались на главном — переносе всех процессов в единую систему и упрощении работы мастеров через мобильный интерфейс.</p>
+                        <p class="txt">Что удалось определить:</p>
+                        <ul class="txt-list">
+                            <li><strong>Какую проблему решаем:</strong> разрозненные процессы, зависимость от офиса и низкая прозрачность работы сотрудников.</li>
+                            <li><strong>Что должен делать продукт:</strong> позволять создавать, распределять и закрывать заказы, отслеживать статусы, работать с запчастями.</li>
+                            <li><strong>Бизнес-цель:</strong> снизить операционные затраты и повысить управляемость процессов.</li>
+                            <li><strong>Почему это важно:</strong> сотрудники могут работать без привязки к офису, а бизнес получает прозрачную и контролируемую операционную модель.</li>
+                        </ul>
+                        <p class="txt">На основе интервью собрал структуру системы.</p>
+                        <div class="visual-gallery">
+                            <div class="visual-item">
+                                <img src="img/structure.png" alt="Landing Page Design" class="full-width-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-info-block">
+                        <h2 class="section-label">Дизайн-процесс</h2>
+                        <p class="txt-secondary">Если собрать ключевые данные по заказам, сотрудникам и показателям в едином интерфейсе с акцентом на визуализацию (дашборд + списки),
+                        то пользователи смогут быстрее отслеживать статус работы, принимать решения и управлять процессами без лишних действий. С такой гипотезой набрасывал скетчи и проектировал путь пользователя.</p>
+                        <div class="visual-gallery">
+                            <div class="visual-item">
+                                <img src="img/sketch.png" alt="Landing Page Design" class="full-width-img">
+                            </div>
+                            <div class="visual-item">
+                                <img src="img/flow.png" alt="Landing Page Design" class="full-width-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-info-block">
+                        <h2 class="section-label">Заказы — это важно </h2>
+                        <p class="txt-secondary">Именно здесь мастера проводят большую часть времени: просматривают список заказов, отслеживают их статусы, открывают карточки и обновляют состояние работы. После завершения работ заказ закрывается внутри карточки.</p>
+                        <div class="visual-gallery">
+                            <div class="visual-item">
+                                <img src="img/order.png" alt="Landing Page Design" class="full-width-img">
+                            </div>
+                            <div class="visual-item">
+                                <img src="img/order_in.png" alt="Landing Page Design" class="full-width-img">
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="case-info-block">
+                        <h2 class="section-label">Склад тоже важен</h2>
+                        <p class="txt">Здесь мастера и администраторы проводят четверть своего времени: пополняют запасы, создают и обрабатывают запросы на выдачу запчастей.</p>
+                        <p class="txt">На этапе MVP были реализованы базовые сценарии работы со складом. Позже добавили возможность формировать акт приёма-передачи запчастей, чтобы фиксировать движение деталей между сотрудниками и повышать прозрачность учёта.</p>
+                        <p class="txt">Акт генерируется автоматически на основе данных системы и шаблона документа, с последующей выгрузкой в PDF для печати и передачи.</p>
+                        <div class="visual-gallery">
+                            <div class="visual-item">
+                                <img src="img/warehouse.png" alt="Landing Page Design" class="full-width-img">
+                            </div>
+                            <div class="visual-item">
+                                <img src="img/warehouse_orders.png" alt="Landing Page Design" class="full-width-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-info-block">
+                        <h2 class="section-label">Прототип</h2>
+                        <p class="txt">Собрал интерактивный прототип в Figma, используя Smart Animate. Продумал переходы и анимации под ключевые сценарии, чтобы максимально приблизить поведение к реальному продукту.</p>
+                        <div class="visual-gallery">
+                            <div class="visual-item">
+                                <img src="img/prototyping.png" alt="Landing Page Design" class="full-width-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-info-block">
+                        <h2 class="section-label">Выводы</h2>
+                        <ul class="txt-list">
+                            <li>Реальная проблема была не в отсутствии интерфейса, а в разрозненных процессах.</li>
+                            <li>Интервью со стейкхолдерами дали достаточно данных, чтобы быстро понять проблему и выстроить структуру продукта.</li>
+                            <li>Смещение фокуса в мобильный сценарий оказалось критичным — именно там происходит основная работа пользователей.</li>
+                        </ul>
+                    </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-wrapper">
+            <p>© Кистауов Даниал 2026</p>
+        </div>
+    </footer>   
+</body>
+<script src="main.js"></script>
+</html>
